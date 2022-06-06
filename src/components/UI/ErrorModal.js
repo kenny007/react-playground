@@ -9,7 +9,7 @@ const ErrorModal = props => {
     const { title, message } = props;
     return (
         <div>
-            <div className={classes.backdrop} />
+            <div className={classes.backdrop} onClick={props.onConfirm} />
                     <Card className={classes.modal}>
                     <header className={classes.header}>
                         <h2>{title}</h2>
@@ -18,7 +18,7 @@ const ErrorModal = props => {
                         <p>{message}</p>
                     </div>
                     <footer className={classes.actions}>
-                        <Button>Okay</Button>
+                        <Button onClick={props.onConfirm}>Okay</Button>
                     </footer>
                 </Card>
         </div>
